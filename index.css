@@ -1,0 +1,23 @@
+/*
+	Museum Styles
+*/
+
+body {
+	font-family: 'Verdana', sans-serif;
+	font-size: 20px;
+	background-color: #DEDEDE;
+	color: white;
+}
+h1 {
+	font-size: 40px;
+}
+select {
+	font-family: 'Verdana', cursive;
+	background-color: orange;
+}
+table, th, td {
+	vertical-align: top;
+}
+img {
+	vertical-align: top;	
+}
