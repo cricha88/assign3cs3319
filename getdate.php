@@ -7,13 +7,14 @@ if (!$result) {
  	die("databases query on doctors before license date failed. ");
 }
 
-
+echo "<table>";
 echo "<th>First Name</th><th>Last Name</th><th>Specialty</th><th>License Date</th>"; 
 while($row = mysqli_fetch_assoc($result)){
 	echo "<tr><td>" . $row["FirstName"] . "</td><td>" . $row["LastName"] . "</td><td>";
     echo $row["Specialty"] . "</td><td>" . $row["LicenseDate"] . "</td></tr>"; 
 
 }
+echo "</table>";
 
 mysqli_free_result($result);
 ?> 
