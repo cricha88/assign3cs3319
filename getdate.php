@@ -1,6 +1,6 @@
 <?php
 	$licdate = $_POST["licdate"];
-	$query = "SELECT * FROM doctor WHERE LicenseDate < " . $licdate . ";" ;
+	$query = 'SELECT * FROM doctor WHERE LicenseDate < "' . $licdate . '"';
 
 $result = mysqli_query($connection, $query);
 if (!$result) {
