@@ -3,34 +3,59 @@
 <head>
 	<title>Doctor Database</title>
 	<link rel="stylesheet" type="text/css" href="index.css">
-	<link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
 </head>
 <body>
 
 <?php
-	include "connecttodb.php";
+	include "connectdb.php";
 ?>
 <h1>Doctor Database</h1>
-
-<h2>Search for doctors</h2>
+<hr>
+<h2>Search for doctors by sort</h2>
 <form action="" method="post">
-Sort by First or Last Name:
+<p>Sort by First or Last Name:</p>
 	<input type="radio" name="sortbyname" value="FirstName">First<br>
 	<input type="radio" name="sortbyname" value="LastName">Last<br>
-Sort by Ascending or Descending Order:
+<p>Sort by Ascending or Descending Order:</p>
 	<input type="radio" name="sortbytype" value="ASC">Ascending<br>
-	<input type="radio" name="sortbytype" value="DSC">Descending<br>	
+	<input type="radio" name="sortbytype" value="DESC">Descending<br>
 
+	<p></p>
 	<input type="submit" value="Search">
 
 </form>
-<hr>
+
+<br/>
+<form action="" method="post">
 <?php
-if (isset($_POST['pickamuseum'])){	
+if (isset($_POST['sortbyname'])) {	
 	include "connectdb.php";
 	include "getdoctors.php";
 }
 ?>
+<input type="submit" value="Get More Info">
+</form>
+
+<br/>
+<?php
+if (isset($_POST['whichdoc'])) {
+	include "getmore.php";
+}
+?>
+
+<br/>
 <hr>
+<h2>Search for doctors by license date</h2>
+<form action="" method="post">
+<p>Find doctors licensed before given license date:</p>
+<input type="date" name="licdate">
+<input type="submit" value="Search">
+</form>
+
+
+
+<br/>
+<hr>
+<br/><br/><br/><br/>
 </body>
 </html>

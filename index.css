@@ -4,12 +4,15 @@
 
 body {
 	font-family: 'Verdana', sans-serif;
-	font-size: 20px;
+	font-size: 12px;
 	background-color: #DEDEDE;
-	color: white;
+	color: #333333;
 }
 h1 {
 	font-size: 40px;
+}
+h2 {
+	font-size: 20px;
 }
 select {
 	font-family: 'Verdana', cursive;
@@ -17,6 +20,8 @@ select {
 }
 table, th, td {
 	vertical-align: top;
+	border: 1px solid black;
+	border-collapse: collapse;
 }
 img {
 	vertical-align: top;	
