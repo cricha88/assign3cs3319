@@ -57,5 +57,10 @@ if (isset($_POST['whichdoc'])) {
 <br/>
 <hr>
 <br/><br/><br/><br/>
+
+<?php
+mysqli_close($connection);
+?>
+
 </body>
 </html>
