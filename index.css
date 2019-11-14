@@ -16,13 +16,19 @@ h2 {
 }
 select {
 	font-family: 'Verdana', cursive;
-	background-color: orange;
+	background-color: lightgrey;
 }
-table, th, td {
+table, tr, td {
 	vertical-align: top;
-	border: 1px solid black;
 	border-collapse: collapse;
+	border-bottom: 1px solid #CCCCCC;
+	padding: 10px;
 }
+th {
+	background-color: lightgrey;
+}
+
+
 img {
 	vertical-align: top;	
 }

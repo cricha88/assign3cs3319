@@ -3,6 +3,7 @@
 <head>
 	<title>Doctor Database</title>
 	<link rel="stylesheet" type="text/css" href="index.css">
+
 </head>
 <body>
 
