@@ -56,7 +56,12 @@ if (isset($_POST['whichdoc'])) {
 <input type="submit" value="Search">
 </form>
 
-
+<br/>
+<?php
+if (isset($_POST['licdate'])) {
+	include "getdate.php";
+}
+?>
 
 <br/>
 <hr>
