@@ -10,6 +10,8 @@
 	include "connectdb.php";
 ?>
 <h1>Doctor Database</h1>
+
+<!--Search for doctors licensed before given date-->
 <hr>
 <h2>Search for doctors by sort</h2>
 <form action="" method="post">
@@ -31,6 +33,7 @@
 if (isset($_POST['sortbyname'])) {	
 	include "connectdb.php";
 	include "getdoctors.php";
+	echo "<br/>";
 }
 ?>
 <input type="submit" value="Get More Info">
@@ -43,6 +46,7 @@ if (isset($_POST['whichdoc'])) {
 }
 ?>
 
+<!--Search for doctors licensed before given date-->
 <br/>
 <hr>
 <h2>Search for doctors by license date</h2>
