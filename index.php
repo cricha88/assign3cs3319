@@ -71,22 +71,22 @@ if (isset($_POST['licdate'])) {
 <h2>Insert a new doctor:</h2>
 <form action="adddoctor.php" method="post" enctype="multipart/form-data">
 New Doctor's First Name: <br/>
-<input type="text" name="FirstName"><br/>
+<input type="text" name="FirstName"><br/><br/>
 New Doctor's Last Name: <br/>
-<input type="text" name="LastName"><br/>
+<input type="text" name="LastName"><br/><br/>
 New Doctor's License Number: <br/>
-<input type="text" name="LicenseNumber"><br/>
+<input type="text" name="LicenseNumber"><br/><br/>
 New Doctor's Specialty: <br/>
-<input type="text" name="Specialty"><br/>
+<input type="text" name="Specialty"><br/><br/>
 New Doctor's License Date: <br/>
-<input type="date" name=LicenseDate><br/>
+<input type="date" name=LicenseDate><br/><br/>
 New Doctor's Hospital Name: <br/>
 <select name="whichhosp" id="whichhosp">
-	<option value=""> Select Hospital </option>
+	<option value="">Select Hospital</option>
   	<?php 
 		include "gethospital.php";
 	?>
-</select><br/>
+</select><br/><br/>
 
 <input type="submit" value="Insert Doctor">
 </form>
@@ -97,7 +97,13 @@ New Doctor's Hospital Name: <br/>
 <hr>
 <!--Delete an existing doctor-->
 <h2>Delete an existing doctor:</h2>
-
+<form action="deldoctor.php" method="post" enctype="multipart/form-data">
+<select name="deldoc" id="deldoc">
+	<option value="">Select Doctor to Delete</option>
+  	<?php 
+		include "getdoctorstodel.php";
+	?>
+</select><br/><br/>
 
 
 <hr>
