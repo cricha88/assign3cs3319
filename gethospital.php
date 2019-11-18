@@ -1,8 +1,6 @@
 <?php
 	$query = "SELECT * FROM hospital";
 	$result = mysqli_query($connection,$query);
-    echo "New Doctor's Hospital Name: </br>";
-   	
     if (!$result) {
         die("databases query for hospitals failed.");
     }

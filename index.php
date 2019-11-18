@@ -75,9 +75,9 @@ New Doctor's Last Name: <input type="text" name="LastName"><br/>
 New Doctor's License Number: <input type="text" name="LicenseNumber"><br/>
 New Doctor's Specialty: <input type="text" name="Specialty"><br/>
 New Doctor's License Date: <input type="date" name=LicenseDate><br/>
-
+New Doctor's Hospital Name: 
 <select name="whichhosp" id="whichhosp">
-	<option value="1">Select Hospital</option>
+	<option value=""> Select Hospital </option>
   	<?php 
 		include "gethospital.php";
 	?>
