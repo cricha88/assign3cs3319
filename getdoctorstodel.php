@@ -5,8 +5,8 @@
         die("databases query for get doctor for delete failed.");
     }
     while ($row = mysqli_fetch_assoc($result)) {
-      echo "<option value='".$row["LicenseNumber"]."'>";
-      echo $row["FirstName"] . ", " . $row["LastName"] . ", " . $row["LicenseNumber"]. ", " . $row["Specialty"] . ", " . $row["HospitalName"];
+      echo "<option value='".$row["doctor.LicenseNumber"]."'>";
+      echo $row["FirstName"] . ", " . $row["LastName"] . ", " . $row["doctor.LicenseNumber"]. ", " . $row["Specialty"] . ", " . $row["HospitalName"];
       echo "</option>";
    	}
    	mysqli_free_result($result);
