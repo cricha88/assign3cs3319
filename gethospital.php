@@ -4,7 +4,7 @@
    	if (!$result) {
         die("databases query for hospitals failed.");
     }
-    echo "New Doctor's Hospital: </br>";
+    echo "New Doctor's Hospital Name: </br>";
     while ($row = mysqli_fetch_assoc($result)) {
       echo "<option value='".$row["HospitalCode"]."'>";
       echo $row["HospitalName"];
