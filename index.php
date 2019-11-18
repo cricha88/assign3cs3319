@@ -12,8 +12,9 @@
 ?>
 <h1>Doctor Database</h1>
 
-<!--Search for doctors licensed before given date-->
+<br/>
 <hr>
+<!--Search for doctors licensed before given date-->
 <h2>Search for doctors by sort</h2>
 <form action="" method="post">
 <p>Sort by First or Last Name:</p>
@@ -47,9 +48,9 @@ if (isset($_POST['whichdoc'])) {
 }
 ?>
 
-<!--Search for doctors licensed before given date-->
 <br/>
 <hr>
+<!--Search for doctors licensed before given date-->
 <h2>Search for doctors by license date</h2>
 <form action="" method="post">
 <p>Find doctors licensed before given license date:</p>
@@ -65,6 +66,35 @@ if (isset($_POST['licdate'])) {
 ?>
 
 <br/>
+<hr>
+<!--Insert a new doctor-->
+<h2>Insert a new doctor:</h2>
+<form action="" method="post" enctype="multipart/form-data">
+New Doctor's First Name: <input type="text" name="FirstName"><br/>
+New Doctor's Last Name: <input type="text" name="LastName"><br/>
+New Doctor's License Number: <input type="text" name="LicenseNumber"><br/>
+New Doctor's Specialty: <input type="text" name="LicenseNumber"><br/>
+New Doctor's License Date: <input type="date" name=LicenseDate><br/>
+New Doctor's Hospital Name:
+
+<select name="gethospital" id="gethospital">
+	<option value="1">Select Hospital</option>
+  	<?php 
+		include "gethospital.php";
+	?>
+</select>
+
+<input type="submit" value="Insert Doctor">
+</form>
+
+
+<br/>
+<hr>
+<!--Delete an existing doctor-->
+<h2>Delete an existing doctor:</h2>
+
+
+
 <hr>
 <br/><br/><br/><br/>
 

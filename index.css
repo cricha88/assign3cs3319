@@ -18,15 +18,10 @@ select {
 	font-family: 'Verdana', cursive;
 	background-color: #add8e6;
 }
-table, tr, td {
+table, tr, th {
 	vertical-align: top;
+	border-collapse: collapse
 	padding: 10px;
-}
-tr {
-	border-bottom: 1px solid #CCCCCC;
-}
-th {
-	background-color: #add8e6;
 }
 
 
