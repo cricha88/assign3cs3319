@@ -105,6 +105,9 @@ New Doctor's Hospital Name: <br/>
 	?>
 </select><br/><br/>
 
+<input type="submit" value="Delete Doctor">
+</form>
+
 
 <hr>
 <br/><br/><br/><br/>
