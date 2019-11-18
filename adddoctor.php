@@ -7,7 +7,6 @@ $licnum = $_POST["LicenseNumber"];
 $spec = $_POST["Specialty"];
 $licdate = $_POST["LicenseDate"];
 $hospcode = $_POST["whichhosp"];
-print_r($hospcode);
 $query= 'INSERT INTO doctor (LicenseNumber, FirstName, LastName, Specialty, LicenseDate, HospitalCode) VALUES ("' .
 $licnum .'","' . $fname . '","' . $lname . '","' . $spec . '","' . $licdate . '","' . $hospcode . '");';
 if (!mysqli_query($connection, $query)) {

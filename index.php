@@ -70,12 +70,17 @@ if (isset($_POST['licdate'])) {
 <!--Insert a new doctor-->
 <h2>Insert a new doctor:</h2>
 <form action="adddoctor.php" method="post" enctype="multipart/form-data">
-New Doctor's First Name: <input type="text" name="FirstName"><br/>
-New Doctor's Last Name: <input type="text" name="LastName"><br/>
-New Doctor's License Number: <input type="text" name="LicenseNumber"><br/>
-New Doctor's Specialty: <input type="text" name="Specialty"><br/>
-New Doctor's License Date: <input type="date" name=LicenseDate><br/>
-New Doctor's Hospital Name: 
+New Doctor's First Name: <br/>
+<input type="text" name="FirstName"><br/>
+New Doctor's Last Name: <br/>
+<input type="text" name="LastName"><br/>
+New Doctor's License Number: <br/>
+<input type="text" name="LicenseNumber"><br/>
+New Doctor's Specialty: <br/>
+<input type="text" name="Specialty"><br/>
+New Doctor's License Date: <br/>
+<input type="date" name=LicenseDate><br/>
+New Doctor's Hospital Name: <br/>
 <select name="whichhosp" id="whichhosp">
 	<option value=""> Select Hospital </option>
   	<?php 
