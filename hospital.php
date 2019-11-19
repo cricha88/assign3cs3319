@@ -34,7 +34,7 @@
 <hr>
 
 <!--Update a hospital name-->
-<h2>Update a hospital name</h2>
+<h2>Update a Hospital Name</h2>
 <form action="updhospname.php" method="post" enctype="mutipart/form-data">
 <select name="whichhosp" id="whichhosp">
 	<option value="">Select Hospital</option>
@@ -52,15 +52,9 @@
 <hr>
 <!--List Hospital Info-->
 <h2>List Hospital Head Doctors</h2>
-<form action="updhospname.php" method="post" enctype="mutipart/form-data">
-<select name="whichhosp" id="whichhosp">
-	<option value="">Select Hospital</option>
   	<?php 
-		include "gethospital.php";
+		include "gethospitalhead.php";
 	?>
-</select>
-<input type="text" name="updhosp">
-<input type="submit" value="Update Hospital Name">
 <br/><br/>
 </form>
 
