@@ -17,8 +17,7 @@
       <a class="navbar-brand" href="#">Doctor Database</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Doctors</a></li>
+      <li class="active"><a href="#">Doctors</a></li>
       <li><a href="#">Hospitals</a></li>
       <li><a href="#">Patients</a></li>
     </ul>
@@ -30,9 +29,9 @@
 	include "connectdb.php";
 ?>
 <h1>Doctors</h1>
-<hr>
 
 <div class="col-sm-6">
+<hr>
 <!--Search for doctors licensed before given date-->
 <h2>Search for doctors by sort</h2>
 <form action="" method="post">
