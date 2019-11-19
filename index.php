@@ -79,7 +79,7 @@ New Doctor's License Number: <br/>
 New Doctor's Specialty: <br/>
 <input type="text" name="Specialty"><br/><br/>
 New Doctor's License Date: <br/>
-<input type="date" name=LicenseDate><br/><br/>
+<input type="date" name="LicenseDate"><br/><br/>
 New Doctor's Hospital Name: <br/>
 <select name="whichhosp" id="whichhosp">
 	<option value="">Select Hospital</option>
@@ -112,13 +112,16 @@ New Doctor's Hospital Name: <br/>
 <hr>
 <!--Update a hospital name-->
 <h2>Update a hospital name:</h2>
-<form action="" method="post" enctype="mutipart/form-data">
+<form action="updhospname.php" method="post" enctype="mutipart/form-data">
 <select name="whichhosp" id="whichhosp">
 	<option value="">Select Hospital</option>
   	<?php 
 		include "gethospital.php";
 	?>
-</select><br/><br/>	
+</select>
+<input type="text" name="updhosp">
+<input type="submit" value="Update Hospital Name">
+<br/><br/>	
 </form>
 
 

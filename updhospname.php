@@ -2,9 +2,9 @@
 	include 'connectdb.php';
 	print_r($_POST);
 
-	$deldoc = $_POST["deldoc"];
-	
-    $query = 'DELETE FROM doctor WHERE LicenseNumber="' . $deldoc . '"';
+	$whichhosp = $_POST["whichhosp"];
+	$updhosp = $_POST["updhosp"];
+    $query = 'UPDATE hospital SET HospitalName="' . $updhosp . '" WHERE HospitalCode="' . $whichhosp . '"';
 	if (!mysqli_query($connection, $query)) {
 		die ("Error while trying to delete doctor.". mysqli_error($connection));
 	} else {
