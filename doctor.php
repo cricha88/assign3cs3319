@@ -19,7 +19,7 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="http://cs3319.gaul.csd.uwo.ca/vm125/a3anne/doctor.php">Doctors</a></li>
       <li><a href="http://cs3319.gaul.csd.uwo.ca/vm125/a3anne/hospital.php">Hospitals</a></li>
-      <li><a href="#">Patients</a></li>
+      <li><a href="http://cs3319.gaul.csd.uwo.ca/vm125/a3anne/patient.php">Patients</a></li>
     </ul>
   </div>
 </nav>

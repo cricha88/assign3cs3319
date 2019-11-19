@@ -18,8 +18,8 @@
     </div>
     <ul class="nav navbar-nav">
       <li><a href="http://cs3319.gaul.csd.uwo.ca/vm125/a3anne/doctor.php">Doctors</a></li>
-      <li class="active"><a href="http://cs3319.gaul.csd.uwo.ca/vm125/a3anne/hospital.php">Hospitals</a></li>
-      <li><a href="http://cs3319.gaul.csd.uwo.ca/vm125/a3anne/patient.php">Patients</a></li>
+      <li><a href="http://cs3319.gaul.csd.uwo.ca/vm125/a3anne/hospital.php">Hospitals</a></li>
+      <li class="active"><a href="http://cs3319.gaul.csd.uwo.ca/vm125/a3anne/patient.php">Patients</a></li>
     </ul>
   </div>
 </nav>
@@ -30,22 +30,19 @@
 ?>
 
 <div class="container">
-<h1>Hospitals</h1>
+<h1>Patients</h1>
 <hr>
 
-<!--Update a hospital name-->
-<h2>Update a Hospital Name</h2>
-<form action="updhospname.php" method="post" enctype="mutipart/form-data">
-<select name="whichhosp" id="whichhosp">
-	<option value="">Select Hospital</option>
-  	<?php 
-		include "gethospital.php";
-	?>
-</select>
-<input type="text" name="updhosp">
-<input type="submit" value="Update Hospital Name">
-<br/><br/>
+<!--Search Patient by OHIP Number-->
+<h2>Search Patient by OHIP Number/h2>
+<form action="" method="post" enctype="">
+<input type="text" name="whichpatient" placeholder="AB12">
+<input type="submit" value="Search Patient">
+<br/>
 </form>
+  	<?php 
+		include "getpatient.php";
+	?>
 
 
 <br/>
