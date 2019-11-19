@@ -125,21 +125,6 @@ New Doctor's Hospital Name: <br/>
 </form>
 
 
-<br/>
-<hr>
-<!--Update a hospital name-->
-<h2>Update a hospital name:</h2>
-<form action="updhospname.php" method="post" enctype="mutipart/form-data">
-<select name="whichhosp" id="whichhosp">
-	<option value="">Select Hospital</option>
-  	<?php 
-		include "gethospital.php";
-	?>
-</select>
-<input type="text" name="updhosp">
-<input type="submit" value="Update Hospital Name">
-<br/><br/>
-</form>
 
 <hr>
 </div>
