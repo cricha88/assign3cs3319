@@ -29,10 +29,10 @@
 <?php
 	include "connectdb.php";
 ?>
-<h1>Doctor Database</h1>
-
-<br/>
+<h1>Doctors</h1>
 <hr>
+
+<div class="col-sm-6">
 <!--Search for doctors licensed before given date-->
 <h2>Search for doctors by sort</h2>
 <form action="" method="post">
@@ -45,7 +45,6 @@
 
 	<p></p>
 	<input type="submit" value="Search">
-
 </form>
 
 <br/>
@@ -143,7 +142,7 @@ New Doctor's Hospital Name: <br/>
 <br/><br/>
 </form>
 
-
+</div>
 
 <hr>
 <br/><br/><br/><br/>
