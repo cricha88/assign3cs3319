@@ -28,9 +28,9 @@
 <?php
 	include "connectdb.php";
 ?>
-<h1>Doctors</h1>
 
-<div class="col-sm-6">
+<div class="container">
+<h1>Doctors</h1>
 <hr>
 <!--Search for doctors licensed before given date-->
 <h2>Search for doctors by sort</h2>
@@ -141,9 +141,9 @@ New Doctor's Hospital Name: <br/>
 <br/><br/>
 </form>
 
+<hr>
 </div>
 
-<hr>
 <br/><br/><br/><br/>
 
 <?php

@@ -13,7 +13,7 @@
 	if (!mysqli_query($connection, $query)) {
 		die ("Error while trying to add new doctor.". mysqli_error($connection));
 	} else {
-		header('Location: index.php'); //send back to index page once it is done
+		header('Location: doctor.php'); //send back to index page once it is done
 		exit;
 	}
 ?>

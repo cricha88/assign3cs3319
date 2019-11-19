@@ -8,7 +8,7 @@
 	if (!mysqli_query($connection, $query)) {
 		die ("Error while trying to delete doctor.". mysqli_error($connection));
 	} else {
-		header('Location: index.php'); //send back to index page once it is done
+		header('Location: hospital.php'); //send back to index page once it is done
 		exit;
 	}
 ?>
