@@ -30,7 +30,7 @@
 ?>
 
 <div class="container">
-<h1>Hospital</h1>
+<h1>Hospitals</h1>
 <hr>
 
 <!--Update a hospital name-->

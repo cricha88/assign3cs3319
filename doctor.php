@@ -36,13 +36,12 @@
 <h2>Search for doctors by sort</h2>
 <form action="" method="post">
 <p>Sort by First or Last Name:</p>
-	<input type="radio" name="sortbyname" value="FirstName">First<br>
-	<input type="radio" name="sortbyname" value="LastName">Last<br>
+	<input type="radio" name="sortbyname" value="FirstName">First<br/>
+	<input type="radio" name="sortbyname" value="LastName">Last<br/><br/>
 <p>Sort by Ascending or Descending Order:</p>
-	<input type="radio" name="sortbytype" value="ASC">Ascending<br>
-	<input type="radio" name="sortbytype" value="DESC">Descending<br>
+	<input type="radio" name="sortbytype" value="ASC">Ascending<br/>
+	<input type="radio" name="sortbytype" value="DESC">Descending<br/><br/>
 
-	<p></p>
 	<input type="submit" value="Search">
 </form>
 
