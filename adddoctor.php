@@ -1,6 +1,7 @@
 <?php
 	include 'connectdb.php';
 	print_r($_POST);
+	
 	$fname = $_POST["FirstName"];
 	$lname = $_POST["LastName"];
 	$licnum = $_POST["LicenseNumber"];

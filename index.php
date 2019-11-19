@@ -104,8 +104,21 @@ New Doctor's Hospital Name: <br/>
 		include "getdoctorstodel.php";
 	?>
 </select><br/><br/>
-
 <input type="submit" value="Delete Doctor">
+</form>
+
+
+<br/>
+<hr>
+<!--Update a hospital name-->
+<h2>Update a hospital name:</h2>
+<form action="" method="post" enctype="mutipart/form-data">
+<select name="whichhosp" id="whichhosp">
+	<option value="">Select Hospital</option>
+  	<?php 
+		include "gethospital.php";
+	?>
+</select><br/><br/>	
 </form>
 
 
