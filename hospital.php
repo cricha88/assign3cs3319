@@ -3,11 +3,11 @@
 <head>
 	<title>Doctor Database</title>
 	<!-- <link rel="stylesheet" type="text/css" href="index.css"> -->
-	<meta charset="utf-8">
+<!-- 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
 </head>
 <body>
 
@@ -34,7 +34,7 @@
 <hr>
 
 <!--Update a hospital name-->
-<h2>Update a hospital name:</h2>
+<h2>Update a hospital name</h2>
 <form action="updhospname.php" method="post" enctype="mutipart/form-data">
 <select name="whichhosp" id="whichhosp">
 	<option value="">Select Hospital</option>
@@ -51,7 +51,7 @@
 <br/>
 <hr>
 <!--List Hospital Info-->
-<h2>List Hospital Head Doctors:</h2>
+<h2>List Hospital Head Doctors</h2>
 <form action="updhospname.php" method="post" enctype="mutipart/form-data">
 <select name="whichhosp" id="whichhosp">
 	<option value="">Select Hospital</option>

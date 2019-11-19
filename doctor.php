@@ -3,11 +3,11 @@
 <head>
 	<title>Doctor Database</title>
 	<!-- <link rel="stylesheet" type="text/css" href="index.css"> -->
-	<meta charset="utf-8">
+	<!-- <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
 </head>
 <body>
 
@@ -85,7 +85,7 @@ if (isset($_POST['licdate'])) {
 <br/>
 <hr>
 <!--Insert a new doctor-->
-<h2>Insert a new doctor:</h2>
+<h2>Insert a new doctor</h2>
 <form action="adddoctor.php" method="post" enctype="multipart/form-data">
 New Doctor's First Name: <br/>
 <input type="text" name="FirstName"><br/><br/>
@@ -113,7 +113,7 @@ New Doctor's Hospital Name: <br/>
 <br/>
 <hr>
 <!--Delete an existing doctor-->
-<h2>Delete an existing doctor:</h2>
+<h2>Delete an existing doctor</h2>
 <form action="deldoctor.php" method="post" enctype="multipart/form-data">
 <select name="deldoc" id="deldoc">
 	<option value="">Select Doctor to Delete</option>
