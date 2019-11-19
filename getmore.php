@@ -6,7 +6,7 @@
    if (!$result) {
          die("database query to get more doctor info failed.");
      }
-   echo "<table>";
+   echo "<table class="table table-hover">";
    echo "<th>First Name</th><th>Last Name</th><th>License Number</th><th>Specialty</th><th>License Date</th><th>Hospital Code</th><th>Hospital Name</th>"; 
    while ($row=mysqli_fetch_assoc($result)) {
 	   echo "<tr><td>" . $row["FirstName"] . "</td><td>" . $row["LastName"] . "</td><td>";
