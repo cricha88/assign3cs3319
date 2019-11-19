@@ -17,8 +17,8 @@
       <a class="navbar-brand" href="#">Doctor Database</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Doctors</a></li>
-      <li><a href="#">Hospitals</a></li>
+      <li class="active"><a href="http://cs3319.gaul.csd.uwo.ca/vm125/a3anne/doctor.php">Doctors</a></li>
+      <li><a href="http://cs3319.gaul.csd.uwo.ca/vm125/a3anne/hospital.php">Hospitals</a></li>
       <li><a href="#">Patients</a></li>
     </ul>
   </div>
