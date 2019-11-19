@@ -4,12 +4,13 @@
     if (!$result) {
       die("databases query on hospital head failed. ");
     }
-
+    echo "<ul>";
     while($row = mysqli_fetch_assoc($result)){
-      echo "<option value='".$row["HospitalCode"]."'>";
+      echo "<li>";
       echo $row["HospitalName"] . ", " . $row["HospitalName"];
-      echo "</option>";
+      echo "</li>";
     }
+    echo "</ul>";
 
     mysqli_free_result($result);
 ?> 
