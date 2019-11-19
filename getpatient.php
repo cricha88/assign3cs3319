@@ -1,13 +1,13 @@
 <?php
-   $whichdoc = $_POST["whichpatient"];
-   $query = 'SELECT * FROM doctor INNER JOIN hospital ON doctor.HospitalCode=hospital.HospitalCode WHERE doctor.LicenseNumber="' . $whichdoc . '"';
+   $whichpatient = $_POST["whichpatient"];
+   $query = 'SELECT * FROM patient INNER JOIN treats ON patient.OHIPNumber=treats.OHIPNumber WHERE patient.OHIPNumber="' . $whichpatient . '"';
 
    $result=mysqli_query($connection,$query);
    if (!$result) {
          die("database query to get patient info failed.");
      }
    echo "<table class='table table-hover'>";
-   echo "<th>Patient Name</th><th>Patient Name</th><th>License Number</th><th>Specialty</th><th>License Date</th><th>Hospital Code</th><th>Hospital Name</th>"; 
+   echo "<th><th>Doctor First Name</th><th>Doctor Last Name</th>"; 
    while ($row=mysqli_fetch_assoc($result)) {
 	   echo "<tr><td>" . $row["FirstName"] . " " . $row["LastName"] . "</td><td>";
 	   echo $row["LicenseNumber"] . "</td><td>" . $row["Specialty"] . "</td><td>" . $row["LicenseDate"] . "</td><td>";

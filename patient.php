@@ -36,12 +36,15 @@
 <!--Search Patient by OHIP Number-->
 <h2>Search Patient by OHIP Number/h2>
 <form action="" method="post" enctype="">
-<input type="text" name="whichpatient" placeholder="AB12">
+<input type="text" name="whichpatient" placeholder="123456789">
 <input type="submit" value="Search Patient">
 <br/>
 </form>
   	<?php 
+	if (isset($_POST['whichpatient'])) {	
 		include "getpatient.php";
+		echo "<br/>";
+	}
 	?>
 
 
