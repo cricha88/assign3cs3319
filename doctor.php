@@ -98,7 +98,6 @@ New Doctor's License Date: <br/>
 <input type="date" name="LicenseDate"><br/><br/>
 New Doctor's Hospital Name: <br/>
 <select name="whichhosp" id="whichhosp">
-	<option value="">Select Hospital</option>
   	<?php 
 		include "gethospital.php";
 	?>
