@@ -11,6 +11,7 @@
 	$query= 'INSERT INTO doctor (LicenseNumber, FirstName, LastName, Specialty, LicenseDate, HospitalCode) VALUES ("' .
 	$licnum .'","' . $fname . '","' . $lname . '","' . $spec . '","' . $licdate . '","' . $hospcode . '");';
 	if (!mysqli_query($connection, $query)) {
+		alert("Error while trying to add new doctor, please enter all fields correctly.");
 		header('Location: doctor.php');
 		die ("Error while trying to add new doctor, please enter all fields correctly.");
 	} else {
