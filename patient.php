@@ -59,9 +59,11 @@
 	?>
 </select>
 <p>Select patient: </p>
+<select name="whichpat" id="whichpat">
   	<?php 
 		include "getpatientsdrop.php";
 	?>
+</select>
 <br/><br/>
 
 
@@ -69,9 +71,18 @@
 <hr>
 <!--Remove doctors from patients-->
 <h2>Remove doctors from patients</h2>
+<p>Select doctor: </p>
+<select name="whichdoc" id="whichdoc">
   	<?php 
-		include "get.php";
+		include "getdoctorsdrop.php";
 	?>
+</select>
+<p>Select patient: </p>
+<select name="whichpat" id="whichpat">
+  	<?php 
+		include "getpatientsdrop.php";
+	?>
+</select>
 <br/><br/>
 
 <hr>
