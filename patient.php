@@ -101,7 +101,7 @@ if (isset($_POST['whichdocassign']) && isset($_POST['whichpatassign'])) {
 </form>
 <br/><br/>
 <?php
-if (isset($_POST['whichdocremove']) && isset($_POST['whichpatremove'])) {
+if (isset($_POST['whichdocremove']) and isset($_POST['whichpatremove'])) {
 	include "removedoc.php";
 }
 ?>
