@@ -5,10 +5,10 @@
 	$whichhosp = $_POST["whichhosp"];
 	$updhosp = $_POST["updhosp"];
     $query = 'UPDATE hospital SET HospitalName="' . $updhosp . '" WHERE HospitalCode="' . $whichhosp . '"';
+	
 	if (!mysqli_query($connection, $query)) {
-		die ("Error while trying to delete doctor.". mysqli_error($connection));
+		echo "Error while trying to update hospital name: ". mysqli_error($connection));
 	} else {
-		header('Location: hospital.php'); //send back to index page once it is done
-		exit;
+		echo "Success: hospital name updated.";
 	}
 ?>

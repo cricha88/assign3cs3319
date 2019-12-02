@@ -128,9 +128,18 @@ if (isset($_POST['LicenseNumber'])) {
 </select><br/><br/>
 <input type="submit" value="Delete Doctor">
 </form>
+
+<form action="" method="post">
 <?php
-if (isset($_POST['deldoc'])) {
+if (isset($_POST['deldoc'])) {	
 	include "deldoctor.php";
+}
+?>
+</form>
+
+<?php
+if (isset($_POST['confirmdeldoc'])) {
+	include "deldoctorwpatients.php";
 }
 ?>
 

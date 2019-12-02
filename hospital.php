@@ -35,7 +35,7 @@
 
 <!--Update a hospital name-->
 <h2>Update a Hospital Name</h2>
-<form action="updhospname.php" method="post" enctype="mutipart/form-data">
+<form action="" method="post" enctype="mutipart/form-data">
 <select name="whichhosp" id="whichhosp">
 	<option value="">Select Hospital</option>
   	<?php 
@@ -46,6 +46,13 @@
 <input type="submit" value="Update Hospital Name">
 <br/><br/>
 </form>
+
+<br/>
+<?php
+if (isset($_POST['whichhosp'])) {
+	include "updhospname.php";
+}
+?>
 
 
 <br/>
