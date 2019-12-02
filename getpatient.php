@@ -11,11 +11,10 @@
    }
    else {
       echo "OHIP Number: " . $whichpatient . "<br/>";
-      echo "Patient Names: " . mysqli_fetch_field_direct($result, 1) . " ". mysqli_fetch_field_direct($result, 2) . "<br/>";
-      echo "Treated by: <br/>";
+      echo "Treated by list: <br/>";
       echo "<ul>";
       while ($row=mysqli_fetch_assoc($result)) {
-	      echo "<li>" . $row["docF"] . " " . $row["docL"] . "</li>";
+	      echo "<li>" . $row["patF"] . " " . $row["patL"] . "treated by" . $row["docF"] . " " . $row["docL"] . "</li>";
       }
       echo "</ul>";
    }
