@@ -7,7 +7,7 @@
          die("Database query to get patient info failed.");
    }
    else if ($result["OHIPNumber"] == '') {
-      echo "Enter an OHIPNumber that exists."
+      echo "Enter an OHIPNumber that exists.";
    }
    else {
       echo "<table class='table table-hover'>";
