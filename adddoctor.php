@@ -10,12 +10,5 @@
 	$hospcode = $_POST["whichhosp"];
 	$query= 'INSERT INTO doctor (LicenseNumber, FirstName, LastName, Specialty, LicenseDate, HospitalCode) VALUES ("' .
 	$licnum .'","' . $fname . '","' . $lname . '","' . $spec . '","' . $licdate . '","' . $hospcode . '");';
-	if (!mysqli_query($connection, $query)) {
-		header('Location: doctor.php');
-		echo "Error on adding new doctor, please enter all fields correctly <br/>";
-		die();
-	} else {
-		header('Location: doctor.php'); //send back to index page once it is done
-		exit;
-	}
+
 ?>

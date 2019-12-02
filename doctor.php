@@ -104,6 +104,16 @@ New Doctor's Hospital Name: <br/>
 </select><br/><br/>
 
 <input type="submit" value="Insert Doctor">
+<br/>
+<?php
+	if (!mysqli_query($connection, $query)) {
+		echo "Error on adding new doctor, please enter all fields correctly <br/>";
+		die();
+	} else {
+		exit;
+	}
+?>
+
 </form>
 
 
