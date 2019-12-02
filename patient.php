@@ -52,12 +52,16 @@
 <hr>
 <!--Assign doctors to patients-->
 <h2>Assign doctors to patients</h2>
-<p></p>
+<p>Select doctor: </p>
+<select name="whichdoc" id="whichdoc">
   	<?php 
 		include "getdoctorsdrop.php";
+	?>
+</select>
+<p>Select patient: </p>
+  	<?php 
 		include "getpatientsdrop.php";
 	?>
-
 <br/><br/>
 
 
