@@ -129,6 +129,7 @@ if (isset($_POST['LicenseNumber'])) {
 <input type="submit" value="Delete Doctor">
 </form>
 
+<br/>
 <form action="" method="post">
 <?php
 if (isset($_POST['deldoc'])) {	
