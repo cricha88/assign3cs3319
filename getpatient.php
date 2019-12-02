@@ -1,23 +1,23 @@
 <?php
    $whichpatient = $_POST["whichpatient"];
-   $query = 'SELECT * FROM patient INNER JOIN treats ON patient.OHIPNumber=treats.OHIPNumber WHERE patient.OHIPNumber="' . $whichpatient . '"';
+   $query = 'SELECT OHIPNumber, patient.FirstName as patF, patient.LastName as patL, doctor.FirstName as docF, doctor.LastName as docL FROM patient INNER JOIN treats ON patient.OHIPNumber=treats.OHIPNumber WHERE patient.OHIPNumber="' . $whichpatient . '"';
 
    $result=mysqli_query($connection,$query);
    if (!$result) {
          die("Database query to get patient info failed.");
    }
    else if (mysqli_fetch_assoc($result)["OHIPNumber"] == '') {
-      echo "Enter an OHIPNumber that exists.";
+      echo "Error: Please enter an OHIP number that exists.";
    }
    else {
-      echo "<table class='table table-hover'>";
-      echo "<th><th>Doctor First Name</th><th>Doctor Last Name</th>"; 
+      echo "OHIP Number: " . mysqli_fetch_assoc($result)["OHIPNumber"];
+      echo "Name: " . mysqli_fetch_assoc($result)["patF"] . " " . mysqli_fetch_assoc($result)["patL"];
+      echo "Treated by: ";
+      echo "<ul>";
       while ($row=mysqli_fetch_assoc($result)) {
-	     echo "<tr><td>" . $row["FirstName"] . " " . $row["LastName"] . "</td><td>";
-	     echo $row["LicenseNumber"] . "</td><td>" . $row["Specialty"] . "</td><td>" . $row["LicenseDate"] . "</td><td>";
-        echo $row["HospitalCode"] . "</td><td>" . $row["HospitalName"] . "</td></tr>"; 
+	      echo "<li>" . $row["docF"] . " " . $row["docL"] . "</li>";
       }
-      echo "</table>";
+      echo "</ul>";
    }
    mysqli_free_result($result);
 ?>
