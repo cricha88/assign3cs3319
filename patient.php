@@ -71,7 +71,7 @@
 </form>
 <br/><br/>
 <?php
-if (isset($_POST['whichdocassign'])) {
+if (isset($_POST['whichdocassign']) && isset($_POST['whichpatassign'])) {
 	include "assigndoc.php";
 }
 ?>
@@ -101,7 +101,7 @@ if (isset($_POST['whichdocassign'])) {
 </form>
 <br/><br/>
 <?php
-if (isset($_POST['whichdocremove'])) {
+if (isset($_POST['whichdocremove']) && isset($_POST['whichpatremove'])) {
 	include "removedoc.php";
 }
 ?>
