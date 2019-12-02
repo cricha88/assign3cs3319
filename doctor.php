@@ -145,6 +145,16 @@ if (isset($_POST['confirmdeldoc'])) {
 ?>
 
 
+<br/>
+<hr>
+<!--View doctors with no patients-->
+<h2>Doctors with no patients</h2>
+<?php
+	include "doctorwnopatients.php";
+
+?>
+
+
 <hr>
 </div>
 

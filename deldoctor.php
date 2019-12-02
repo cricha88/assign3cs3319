@@ -3,10 +3,9 @@
 	$deldoc = $_POST["deldoc"];
     
 	$querycheck = 'SELECT COUNT(*) from treats WHERE LicenseNumber="' . $deldoc . '"';
-	$resultcheck = mysqli_query($connection, $querycheck);
     $querydel = 'DELETE FROM doctor WHERE LicenseNumber="' . $deldoc . '"';
 
-    if ($resultcheck > 0) {
+    if ((mysqli_query($connection, $querycheck)["COUNT(*)"]) > 0) {
 		echo "This doctor has patients, please confirm to delete: <br/>";
 		echo "<input type='radio' name='confirmdeldoc' value='" . $deldoc . "'> Confirm Deletion <br/>";
 		echo "<input type='radio' name='confirmdeldoc' value='XXXX'> Cancel Deletion <br/>";
