@@ -1,7 +1,7 @@
 <?php
 	include 'connectdb.php';
 	$whichdeldoc = $_POST["confirmdeldoc"];
-    $query = 'DELETE CASCADE FROM doctor WHERE LicenseNumber="' . $whichdeldoc . '"';
+    $query = 'CASCADE DELETE FROM doctor WHERE LicenseNumber="' . $whichdeldoc . '"';
 
 	if ($whichdeldoc == 9999) {
 		echo "Did not delete doctor.";
