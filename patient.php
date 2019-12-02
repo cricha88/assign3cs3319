@@ -54,13 +54,14 @@
 <h2>Assign doctors to patients</h2>
 <form action="" method="post" enctype="mutipart/form-data">
 <p>Select doctor: </p>
-<select name="whichdoc" id="whichdoc">
+<select name="whichdocassign" id="whichdocassign">
   	<?php 
 		include "getdoctorsdrop.php";
 	?>
 </select>
+<br/><br/>
 <p>Select patient: </p>
-<select name="whichpat" id="whichpat">
+<select name="whichpatassign" id="whichpatassign">
   	<?php 
 		include "getpatientsdrop.php";
 	?>
@@ -68,7 +69,11 @@
 <input type="submit" value="Assign">
 </form>
 <br/><br/>
-
+<?php
+if (isset($_POST['whichdocassign']) && isset($_POST['whichpatassign'])) {
+	include "assigndoc.php";
+}
+?>
 
 
 
@@ -78,13 +83,14 @@
 <h2>Remove doctors from patients</h2>
 <form action="" method="post" enctype="mutipart/form-data">
 <p>Select doctor: </p>
-<select name="whichdoc" id="whichdoc">
+<select name="whichdocremove" id="whichdocremove">
   	<?php 
 		include "getdoctorsdrop.php";
 	?>
 </select>
+<br/><br/>
 <p>Select patient: </p>
-<select name="whichpat" id="whichpat">
+<select name="whichpatremove" id="whichpatremove">
   	<?php 
 		include "getpatientsdrop.php";
 	?>
@@ -92,6 +98,11 @@
 <input type="submit" value="Remove">
 </form>
 <br/><br/>
+<?php
+if (isset($_POST['whichdocremove']) && isset($_POST['whichpatremove'])) {
+	include "removedoc.php";
+}
+?>
 
 <hr>
 </div>
