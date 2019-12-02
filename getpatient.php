@@ -10,13 +10,12 @@
       echo "Error: Please enter an OHIP number that exists.";
    }
    else {
-      echo "OHIP Number: " . $whichpatient . "<br/>";
-      echo "Treated by list: <br/>";
-      echo "<ul>";
+      echo "<table class='table table-hover'>";
+      echo "<th>Patient</th><th>Doctor(s)</th>"; 
       while ($row=mysqli_fetch_assoc($result)) {
-	      echo "<li>" . $row["patF"] . " " . $row["patL"] . "treated by" . $row["docF"] . " " . $row["docL"] . "</li>";
+	      echo "<tr><td>" . $row["patF"] . " " . $row["patL"] . "</td><td>" . $row["docF"] . " " . $row["docL"] . "</td></tr>";
       }
-      echo "</ul>";
+      echo "</table>";
    }
    mysqli_free_result($result);
 ?>
