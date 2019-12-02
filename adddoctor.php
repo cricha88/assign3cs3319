@@ -12,7 +12,8 @@
 	$licnum .'","' . $fname . '","' . $lname . '","' . $spec . '","' . $licdate . '","' . $hospcode . '");';
 	if (!mysqli_query($connection, $query)) {
 		header('Location: doctor.php');
-		die ("Error while trying to add new doctor, please enter all fields correctly.");		
+		echo "Error on adding new doctor, please enter all fields correctly <br/>";
+		die();
 	} else {
 		header('Location: doctor.php'); //send back to index page once it is done
 		exit;
