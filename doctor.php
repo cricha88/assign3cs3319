@@ -106,6 +106,8 @@ New Doctor's Hospital Name: <br/>
 <input type="submit" value="Insert Doctor">
 <br/>
 </form>
+
+<br/>
 <?php
 if (isset($_POST['LicenseNumber'])) {
 	include "adddoctor.php";
@@ -117,7 +119,7 @@ if (isset($_POST['LicenseNumber'])) {
 <hr>
 <!--Delete an existing doctor-->
 <h2>Delete an existing doctor</h2>
-<form action="deldoctor.php" method="post" enctype="multipart/form-data">
+<form action="" method="post" enctype="multipart/form-data">
 <select name="deldoc" id="deldoc">
 	<option value="">Select Doctor to Delete</option>
   	<?php 
@@ -126,7 +128,11 @@ if (isset($_POST['LicenseNumber'])) {
 </select><br/><br/>
 <input type="submit" value="Delete Doctor">
 </form>
-
+<?php
+if (isset($_POST['deldoc'])) {
+	include "deldoctor.php";
+}
+?>
 
 
 <hr>

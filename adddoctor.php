@@ -11,7 +11,7 @@
 	$licnum .'","' . $fname . '","' . $lname . '","' . $spec . '","' . $licdate . '","' . $hospcode . '");';
 
 	if (!mysqli_query($connection, $query)) {
-		echo "Error on adding new doctor, please enter fields correctly: " . mysqli_error($connection) . "<br/>";
+		echo "Error on trying to add new doctor: " . mysqli_error($connection) . "<br/>";
 	}
-	
+
 ?>
