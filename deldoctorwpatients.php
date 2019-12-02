@@ -5,7 +5,6 @@
 
 	if ($whichdeldoc == 9999) {
 		echo "Did not delete doctor.";
-		break;
 	}
 	else if (!mysqli_query($connection, $query)) {
 		echo "Error while trying to delete doctor: ". mysqli_error($connection);
