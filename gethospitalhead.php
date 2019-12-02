@@ -1,5 +1,5 @@
 <?php
-    $query = "SELECT HospitalName, FirstName, LastName, StartDate FROM hospital INNER JOIN doctor ON hospital.LicenseNumber=doctor.LicenseNumber ORDER BY HospitalName" . ";";
+    $query = "SELECT HospitalName, FirstName, LastName, StartDate FROM hospital INNER JOIN doctor ON hospital.HeadDoc=doctor.LicenseNumber ORDER BY HospitalName" . ";";
     $result = mysqli_query($connection, $query);
     if (!$result) {
       die("databases query on hospital head failed. ");

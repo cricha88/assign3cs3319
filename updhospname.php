@@ -1,6 +1,5 @@
 <?php
 	include 'connectdb.php';
-	print_r($_POST);
 
 	$whichhosp = $_POST["whichhosp"];
 	$updhosp = $_POST["updhosp"];
