@@ -50,8 +50,8 @@
 
 <br/>
 <hr>
-<!--List Hospital Info-->
-<h2>List Hospital Head Doctors</h2>
+<!--Assign doctors to patients-->
+<h2>Assign doctors to patients</h2>
   	<?php 
 		include "gethospitalhead.php";
 	?>

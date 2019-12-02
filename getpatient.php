@@ -11,11 +11,10 @@
    }
    else {
       echo "<table class='table table-hover'>";
-      echo "<th>Patient</th><th>Doctor(s)</th>"; 
+      echo "<th>Patient</th><th>Doctor</th>"; 
       while ($row=mysqli_fetch_assoc($result)) {
 	      echo "<tr><td>" . $row["patF"] . " " . $row["patL"] . "</td><td>" . $row["docF"] . " " . $row["docL"] . "</td></tr>";
       }
-      
       echo "</table>";
    }
    mysqli_free_result($result);
