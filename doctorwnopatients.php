@@ -1,7 +1,7 @@
 <?php
 	include 'connectdb.php';
 
-    $query = 'SELECT *, COUNT(*) from treats';
+    $query =  'SELECT *, COUNT(OHIPNumber) from doctor LEFT JOIN treats ON doctor.LicenseNumber=treats.LicenseNumber GROUP BY doctor.LicenseNumber';
 	$result = mysqli_query($connection, $query);
 
 	if (!$result) {
@@ -10,7 +10,9 @@
 	
 	echo "<ul>";
 	while($row = mysqli_fetch_assoc($result)){
-		echo '<li>' . $row["FirstName"] . " " . $row["LastName"] . "</li>";
+		if ($row["COUNT(OHIPNumber)"] == 0) {
+			echo '<li>' . $row["FirstName"] . " " . $row["LastName"] . "</li>";
+		}
 	}
 	echo "</ul>";
 
