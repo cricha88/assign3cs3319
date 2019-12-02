@@ -10,9 +10,9 @@
       echo "Error: Please enter an OHIP number that exists.";
    }
    else {
-      echo "OHIP Number: " . mysqli_fetch_assoc($result)["OHIPNumber"];
-      echo "Name: " . mysqli_fetch_assoc($result)["patF"] . " " . mysqli_fetch_assoc($result)["patL"];
-      echo "Treated by: ";
+      echo "OHIP Number: " . mysqli_fetch_assoc($result)["OHIPNumber"] . "<br/>";
+      echo "Name: " . mysqli_fetch_assoc($result)["patF"] . " " . mysqli_fetch_assoc($result)["patL"] . "<br/>";
+      echo "Treated by: <br/>";
       echo "<ul>";
       while ($row=mysqli_fetch_assoc($result)) {
 	      echo "<li>" . $row["docF"] . " " . $row["docL"] . "</li>";
