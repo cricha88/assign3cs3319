@@ -6,7 +6,7 @@
    if (!$result) {
          die("Database query to get patient info failed.");
    }
-   else if (mysqli_fetch_assoc($result)["OHIPNumber"] == '') {
+   else if (mysqli_num_rows($result) == 0) {
       echo "Error: Please enter an OHIP number that exists.";
    }
    else {
