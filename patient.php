@@ -52,11 +52,23 @@
 <hr>
 <!--Assign doctors to patients-->
 <h2>Assign doctors to patients</h2>
+<p></p>
   	<?php 
-		include "gethospitalhead.php";
+		include "getdoctorsdrop.php";
+		include "getpatientsdrop.php";
 	?>
+
 <br/><br/>
 
+
+<br/>
+<hr>
+<!--Remove doctors from patients-->
+<h2>Remove doctors from patients</h2>
+  	<?php 
+		include "get.php";
+	?>
+<br/><br/>
 
 <hr>
 </div>
