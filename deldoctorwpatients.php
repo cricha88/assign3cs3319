@@ -1,9 +1,9 @@
 <?php
 	include 'connectdb.php';
 	$whichdeldoc = $_POST["confirmdeldoc"];
-    $query = 'CASCADE DELETE FROM doctor WHERE LicenseNumber="' . $whichdeldoc . '"';
+    $query = 'DELETE FROM doctor WHERE LicenseNumber="' . $whichdeldoc . '"';
 
-	if ($whichdeldoc == 9999) {
+	if ($whichdeldoc == 'XXXX') {
 		echo "Did not delete doctor.";
 	}
 	else if (!mysqli_query($connection, $query)) {
