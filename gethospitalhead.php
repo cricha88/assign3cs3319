@@ -5,7 +5,7 @@
       die("databases query on hospital head failed. ");
     }
     echo "<table class='table table-hover'>";
-    echo "<th>Hospital Name</th><th>First Name</th><th>Last Name</th><th>Start Date</th>"; 
+    echo "<th>Hospital Name</th><th>Head Doctor First Name</th><th>Head Doctor Last Name</th><th>Start Date</th>"; 
     while($row = mysqli_fetch_assoc($result)){
       echo "<tr><td>" . $row["HospitalName"] . "</td><td>" . $row["FirstName"] . "</td><td>" . $row["LastName"] . "</td><td>" . $row["StartDate"] . "</td></tr>"; 
     }

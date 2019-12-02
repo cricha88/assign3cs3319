@@ -40,12 +40,12 @@
 <input type="submit" value="Search Patient">
 <br/>
 </form>
-  	<?php 
+<br/>
+<?php 
 	if (isset($_POST['whichpatient'])) {	
 		include "getpatient.php";
-		echo "<br/>";
 	}
-	?>
+?>
 
 
 <br/>
