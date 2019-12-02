@@ -6,7 +6,7 @@
     }
     while ($row = mysqli_fetch_assoc($result)) {
       echo "<option value='".$row["OHIPNumber"]."'>";
-      echo $row["OHIPNumber"] . ", " . $row["FirstName"] . ", " . $row["LastName"];
+      echo $row["OHIPNumber"] . ", " . $row["FirstName"] . " " . $row["LastName"];
       echo "</option>";
    	}
    	mysqli_free_result($result);

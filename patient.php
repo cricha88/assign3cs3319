@@ -66,6 +66,7 @@
 		include "getpatientsdrop.php";
 	?>
 </select>
+<br/><br/>
 <input type="submit" value="Assign">
 </form>
 <br/><br/>
@@ -95,6 +96,7 @@ if (isset($_POST['whichdocassign']) && isset($_POST['whichpatassign'])) {
 		include "getpatientsdrop.php";
 	?>
 </select>
+<br/><br/>
 <input type="submit" value="Remove">
 </form>
 <br/><br/>
