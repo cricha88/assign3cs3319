@@ -7,7 +7,7 @@
 		echo "Did not delete doctor.";
 	}
 	else {
-		echo "Success: deleted doctor."
+		echo "Success: deleted doctor.";
 	}
 
 ?>

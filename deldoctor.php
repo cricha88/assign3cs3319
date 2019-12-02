@@ -13,7 +13,7 @@
 		echo "Error while trying to delete doctor: " . mysqli_error($connection) . "<br/>";
 	}
 	else {
-		echo "Success: deleted doctor."
+		echo "Success: deleted doctor.";
 	}
 
 ?>

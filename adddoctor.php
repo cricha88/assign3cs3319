@@ -14,7 +14,7 @@
 		echo "Error on trying to add new doctor: " . mysqli_error($connection) . "<br/>";
 	}
 	else {
-		echo "Success: added doctor."
+		echo "Success: added doctor.";
 	}
 
 ?>
