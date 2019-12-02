@@ -85,7 +85,7 @@ if (isset($_POST['licdate'])) {
 <hr>
 <!--Insert a new doctor-->
 <h2>Insert a new doctor</h2>
-<form action="adddoctor.php" method="post" enctype="multipart/form-data">
+<form action="" method="post" enctype="multipart/form-data">
 New Doctor's First Name: <br/>
 <input type="text" name="FirstName"><br/><br/>
 New Doctor's Last Name: <br/>
@@ -98,23 +98,19 @@ New Doctor's License Date: <br/>
 <input type="date" name="LicenseDate"><br/><br/>
 New Doctor's Hospital Name: <br/>
 <select name="whichhosp" id="whichhosp">
-  	<?php 
-		include "gethospital.php";
-	?>
+<?php 
+	include "gethospital.php";
+?>
 </select><br/><br/>
 
 <input type="submit" value="Insert Doctor">
 <br/>
-<?php
-	if (!mysqli_query($connection, $query)) {
-		echo "Error on adding new doctor, please enter all fields correctly <br/>";
-	} else {
-		exit;
-	}
-?>
-
 </form>
-
+<?php
+if (isset($_POST['LicenseNumber'])) {
+	include "adddoctor.php";
+}
+?>
 
 
 <br/>
