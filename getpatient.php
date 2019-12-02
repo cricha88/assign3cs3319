@@ -11,6 +11,7 @@
    }
    else {
       echo "OHIP Number: " . $whichpatient . "<br/>";
+      echo "Patient Names: " . mysqli_result($result) . "<br/>";
       echo "Treated by: <br/>";
       echo "<ul>";
       while ($row=mysqli_fetch_assoc($result)) {
