@@ -52,6 +52,7 @@
 <hr>
 <!--Assign doctors to patients-->
 <h2>Assign doctors to patients</h2>
+<form action="" method="post" enctype="mutipart/form-data">
 <p>Select doctor: </p>
 <select name="whichdoc" id="whichdoc">
   	<?php 
@@ -64,13 +65,18 @@
 		include "getpatientsdrop.php";
 	?>
 </select>
+<input type="submit" value="Assign">
+</form>
 <br/><br/>
+
+
 
 
 <br/>
 <hr>
 <!--Remove doctors from patients-->
 <h2>Remove doctors from patients</h2>
+<form action="" method="post" enctype="mutipart/form-data">
 <p>Select doctor: </p>
 <select name="whichdoc" id="whichdoc">
   	<?php 
@@ -83,6 +89,8 @@
 		include "getpatientsdrop.php";
 	?>
 </select>
+<input type="submit" value="Remove">
+</form>
 <br/><br/>
 
 <hr>
