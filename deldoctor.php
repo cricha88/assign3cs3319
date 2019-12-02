@@ -3,7 +3,7 @@
 	$deldoc = $_POST["deldoc"];
     
 	$querycheck = 'SELECT COUNT(*) from treats WHERE LicenseNumber="' . $deldoc . '"';
-	$resutcheck = mysqli_query($connection, $querycheck)
+	$resutcheck = mysqli_query($connection, $querycheck);
     $querydel = 'DELETE FROM doctor WHERE LicenseNumber="' . $deldoc . '"';
 
     if ($resultcheck > 0) {
