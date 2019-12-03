@@ -38,11 +38,13 @@
 	<!--Update a hospital name-->
 	<h2>Update a Hospital Name</h2>
 	<form action="" method="post" enctype="mutipart/form-data">
+	Updating: 
 	<select class="form-control" name="whichhosp" id="whichhosp">
 	  	<?php 
 			include "gethospital.php";
 		?>
 	</select>
+	With new hospital name: 
 	<input class="form-control" type="text" name="updhosp">
 	<input class="btn btn-primary" type="submit" value="Update Hospital Name">
 	<br/><br/>
