@@ -2,9 +2,10 @@
 <html>
 <head>
 	<title>Doctor Database</title>
-	<!-- <link rel="stylesheet" type="text/css" href="index.css"> -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Using boottstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -38,23 +39,24 @@
 	<!--Update a hospital name-->
 	<h2>Update a Hospital Name</h2>
 	<form action="" method="post" enctype="mutipart/form-data">
-	Updating: 
-	<select class="form-control" name="whichhosp" id="whichhosp">
-	  	<?php 
-			include "gethospital.php";
-		?>
-	</select>
-	With new hospital name: 
-	<input class="form-control" type="text" name="updhosp">
-	<input class="btn btn-primary" type="submit" value="Update Hospital Name">
-	<br/><br/>
+		<p>Updating: </p>
+		<select class="form-control" name="whichhosp" id="whichhosp">
+		  	<?php 
+				include "gethospital.php";
+			?>
+		</select>
+		<br/><br/>
+		<p>With new hospital name: </p>
+		<input class="form-control" type="text" name="updhosp"><br/><br/>
+		<input class="btn btn-primary" type="submit" value="Update Hospital Name">
+		<br/><br/>
 	</form>
 
 	<br/>
 	<?php
-	if (isset($_POST['whichhosp'])) {
-		include "updhospname.php";
-	}
+		if (isset($_POST['whichhosp'])) {
+			include "updhospname.php";
+		}
 	?>
 	<br/>
 	<hr>
