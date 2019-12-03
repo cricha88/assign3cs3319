@@ -35,7 +35,7 @@
 	<h1>Doctors</h1>
 	<hr>
 
-	<!--Search for doctors licensed before given date-->
+	<!-- Search for doctors based on search criteria -->
 	<h2>Search for doctors by sort</h2>
 	<form action="" method="post">
 	<p>Sort by First or Last Name:</p>
