@@ -31,9 +31,10 @@
 	include "connectdb.php";
 ?>
 
+
+<!-- Main content for patients page -->
 <div class="container">
-	<!-- Patients Page -->
-	<h1>Patients</h1>
+	<h1 class="text-center">Patients</h1>
 	<hr>
 
 	<!--Search Patient by OHIP Number-->

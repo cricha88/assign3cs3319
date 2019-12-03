@@ -31,35 +31,39 @@
 	include "connectdb.php";
 ?>
 
+
+<!-- Main content for doctors page -->
 <div class="container">
-	<h1>Doctors</h1>
+	<h1 class="text-center">Doctors</h1>
 	<hr>
 
 	<!-- Search for doctors based on search criteria -->
 	<h2>Search for doctors by sort</h2>
-	<form action="" method="post">
-	<p>Sort by First or Last Name:</p>
+	<form action="" method="post" enctype="multipart/form-data">
+		<!-- Allow for sort based on first or last name -->
+		<p>Sort by First or Last Name:</p>
 		<input type="radio" name="sortbyname" value="FirstName">First<br/>
 		<input type="radio" name="sortbyname" value="LastName">Last<br/><br/>
-	<p>Sort by Ascending or Descending Order:</p>
+		<!-- Allow for sort based on ascending or descending -->
+		<p>Sort by Ascending or Descending Order:</p>
 		<input type="radio" name="sortbytype" value="ASC">Ascending<br/>
 		<input type="radio" name="sortbytype" value="DESC">Descending<br/><br/>
-
+		<!-- Submit sorting options to get doctors sorted that way -->
 		<input class="btn btn-primary" type="submit" value="Search">
 	</form>
-
 	<br/>
+	<!-- Display doctors in sorted way and allow to select doctor to get more info -->
 	<form action="" method="post">
-	<?php
-	if (isset($_POST['sortbyname'])) {	
-		include "connectdb.php";
-		include "getdoctors.php";
-		echo "<br/>";
-	}
-	?>
-	<input class="btn btn-primary" type="submit" value="Get More Info">
+		<?php
+		if (isset($_POST['sortbyname'])) {	
+			include "connectdb.php";
+			include "getdoctors.php";
+			echo "<br/>";
+		}
+		?>
+		<input class="btn btn-primary" type="submit" value="Get More Info">
 	</form>
-
+	<!-- Display more info for the selected doctor -->
 	<br/>
 	<?php
 	if (isset($_POST['whichdoc'])) {
@@ -72,10 +76,10 @@
 
 	<!--Search for doctors licensed before given date-->
 	<h2>Search for doctors by license date</h2>
-	<form action="" method="post">
-	<p>Find doctors licensed before given license date:</p>
-	<input class="form-control" type="date" name="licdate">
-	<input class="form-control" type="submit" value="Search">
+	<form action="" method="post" enctype="multipart/form-data">
+		<p>Find doctors licensed before given license date:</p>
+		<input class="form-control" type="date" name="licdate"><br/><br/>
+		<input class="btn btn-primary" type="submit" value="Search">
 	</form>
 
 	<br/>
@@ -101,6 +105,7 @@
 		<input class="form-control" type="text" name="Specialty"><br/><br/>
 		New Doctor's License Date: <br/>
 		<input class="form-control" type="date" name="LicenseDate"><br/><br/>
+		<!-- Get user to pick hospital form a dropdown list of existing hospitals instead of entering any new hospital -->
 		New Doctor's Hospital Name: <br/>
 		<select class="form-control" name="whichhosp" id="whichhosp">
 			<?php 
@@ -108,11 +113,11 @@
 			?>
 		</select>
 		<br/><br/>
-
-		<input type="submit" value="Insert Doctor">
+		<!-- Submit new doctor inputs -->
+		<input class="btn btn-primary" type="submit" value="Insert Doctor">
 		<br/>
 	</form>
-
+	<!-- If LicenseNumber of a new doctor was posted successfully, include adddoctor.php which adds the doctor -->
 	<br/>
 	<?php
 		if (isset($_POST['LicenseNumber'])) {
@@ -126,28 +131,30 @@
 	<!--Delete an existing doctor-->
 	<h2>Delete an existing doctor</h2>
 	<form action="" method="post" enctype="multipart/form-data">
-	<select class="form-control" name="deldoc" id="deldoc">
-		<option value="">Select Doctor to Delete</option>
-	  	<?php 
-			include "getdoctorstodel.php";
-		?>
-	</select><br/><br/>
-	<input class="btn btn-primary" type="submit" value="Delete Doctor">
+		<!-- Get list of doctors to delete -->
+		<select class="form-control" name="deldoc" id="deldoc">
+			<option value="">Select Doctor to Delete</option>
+		  	<?php 
+				include "getdoctorstodel.php";
+			?>
+		</select><br/><br/>
+		<!-- Allow user to select delete doctor -->
+		<input class="btn btn-primary" type="submit" value="Delete Doctor">
 	</form>
-
+	<!-- Checks if doctor has patients, deletes if not, and redirects to confirm if they do  -->
 	<br/>
 	<form action="" method="post">
-	<?php
-	if (isset($_POST['deldoc'])) {	
-		include "deldoctor.php";
-	}
-	?>
+		<?php
+		if (isset($_POST['deldoc'])) {	
+			include "deldoctor.php";
+		}
+		?>
 	</form>
-
+	<!-- If the user has chosen to delete a doctor with patients, they must confirm whether they want to or not -->
 	<?php
-	if (isset($_POST['confirmdeldoc'])) {
-		include "deldoctorwpatients.php";
-	}
+		if (isset($_POST['confirmdeldoc'])) {
+			include "deldoctorwpatients.php";
+		}
 	?>
 	<br/>
 	<hr>
@@ -158,7 +165,6 @@
 	<!-- Show doctors with no patients from doctorwnopatients.php -->
 	<?php
 		include "doctorwnopatients.php";
-
 	?>
 
 

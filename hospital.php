@@ -31,14 +31,16 @@
 	include "connectdb.php";
 ?>
 
+<!-- Main content for hospital page -->
 <div class="container">
-	<h1>Hospitals</h1>
+	<h1 class="text-center">Hospitals</h1>
 	<hr>
 
 
 	<!--Update a hospital name-->
 	<h2>Update a Hospital Name</h2>
 	<form action="" method="post" enctype="mutipart/form-data">
+		<!-- Get a list of the hospital names to select from -->
 		<p>Updating: </p>
 		<select class="form-control" name="whichhosp" id="whichhosp">
 		  	<?php 
@@ -46,13 +48,15 @@
 			?>
 		</select>
 		<br/><br/>
+		<!-- Input new hospital name to replace selected hospital name -->
 		<p>With new hospital name: </p>
 		<input class="form-control" type="text" name="updhosp"><br/><br/>
+		<!-- Submit the new hospital name to replace the old hospital name -->
 		<input class="btn btn-primary" type="submit" value="Update Hospital Name">
 		<br/><br/>
 	</form>
-
 	<br/>
+	<!-- If which hospital name to update was posted, update hospital name through updhospname.php -->
 	<?php
 		if (isset($_POST['whichhosp'])) {
 			include "updhospname.php";
@@ -64,6 +68,7 @@
 
 	<!-- List Hospital Info and Head Doctors-->
 	<h2>List Hospital Head Doctors</h2>
+	  	<!-- Get hospital info from gethospitalhead.php -->
 	  	<?php 
 			include "gethospitalhead.php";
 		?>
