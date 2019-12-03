@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Doctor Database</title>
-	<!-- <link rel="stylesheet" type="text/css" href="index.css"> -->
+	<link rel="stylesheet" type="text/css" href="index.css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -11,17 +11,18 @@
 </head>
 <body>
 
+<!-- Navigation Bar -->
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Doctor Database</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="http://cs3319.gaul.csd.uwo.ca/vm125/a3anne/doctor.php">Doctors</a></li>
-      <li><a href="http://cs3319.gaul.csd.uwo.ca/vm125/a3anne/hospital.php">Hospitals</a></li>
-      <li><a href="http://cs3319.gaul.csd.uwo.ca/vm125/a3anne/patient.php">Patients</a></li>
-    </ul>
-  </div>
+  	<div class="container-fluid">
+    	<div class="navbar-header">
+      	<a class="navbar-brand" href="#">Doctor Database</a>
+    	</div>
+    	<ul class="nav navbar-nav">
+      		<li class="active"><a href="http://cs3319.gaul.csd.uwo.ca/vm125/a3anne/doctor.php">Doctors</a></li>
+      		<li><a href="http://cs3319.gaul.csd.uwo.ca/vm125/a3anne/hospital.php">Hospitals</a></li>
+      		<li><a href="http://cs3319.gaul.csd.uwo.ca/vm125/a3anne/patient.php">Patients</a></li>
+    	</ul>
+  	</div>
 </nav>
 
 

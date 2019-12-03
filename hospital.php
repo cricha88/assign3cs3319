@@ -11,17 +11,18 @@
 </head>
 <body>
 
+<!-- Navigation bar -->
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Doctor Database</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li><a href="http://cs3319.gaul.csd.uwo.ca/vm125/a3anne/doctor.php">Doctors</a></li>
-      <li class="active"><a href="http://cs3319.gaul.csd.uwo.ca/vm125/a3anne/hospital.php">Hospitals</a></li>
-      <li><a href="http://cs3319.gaul.csd.uwo.ca/vm125/a3anne/patient.php">Patients</a></li>
-    </ul>
-  </div>
+  	<div class="container-fluid">
+    	<div class="navbar-header">
+      	<a class="navbar-brand" href="#">Doctor Database</a>
+    	</div>
+    	<ul class="nav navbar-nav">
+      		<li><a href="http://cs3319.gaul.csd.uwo.ca/vm125/a3anne/doctor.php">Doctors</a></li>
+      		<li class="active"><a href="http://cs3319.gaul.csd.uwo.ca/vm125/a3anne/hospital.php">Hospitals</a></li>
+      		<li><a href="http://cs3319.gaul.csd.uwo.ca/vm125/a3anne/patient.php">Patients</a></li>
+    	</ul>
+  	</div>
 </nav>
 
 
