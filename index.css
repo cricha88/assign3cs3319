@@ -1,0 +1,13 @@
+/* Very basic additional CSS to complement bootstrap CSS */
+
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
