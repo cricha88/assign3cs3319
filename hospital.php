@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<!-- Navigation bar -->
+<!-- Navigation bar current page is hospitals -->
 <nav class="navbar navbar-inverse">
   	<div class="container-fluid">
     	<div class="navbar-header">
@@ -25,7 +25,7 @@
   	</div>
 </nav>
 
-
+<!-- Connect to database -->
 <?php
 	include "connectdb.php";
 ?>
@@ -38,13 +38,13 @@
 	<!--Update a hospital name-->
 	<h2>Update a Hospital Name</h2>
 	<form action="" method="post" enctype="mutipart/form-data">
-	<select name="whichhosp" id="whichhosp">
+	<select class="form-control" name="whichhosp" id="whichhosp">
 	  	<?php 
 			include "gethospital.php";
 		?>
 	</select>
 	<input class="form-control" type="text" name="updhosp">
-	<input type="submit" value="Update Hospital Name">
+	<input class="btn btn-primary" type="submit" value="Update Hospital Name">
 	<br/><br/>
 	</form>
 

@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<!-- Navigation bar -->
+<!-- Navigation bar current page is patients-->
 <nav class="navbar navbar-inverse">
   	<div class="container-fluid">
     	<div class="navbar-header">
@@ -25,7 +25,7 @@
   	</div>
 </nav>
 
-
+<!-- Connect to database -->
 <?php
 	include "connectdb.php";
 ?>
@@ -90,24 +90,24 @@
 	<!--Remove doctors from patients-->
 	<h2>Remove doctors from patients</h2>
 	<form action="" method="post" enctype="mutipart/form-data">
-	<!-- Dropdown for all current doctors -->
-	<p>Select doctor: </p>
-	<select class="form-control" name="whichdocremove" id="whichdocremove">
-	  	<?php 
-			include "getdoctorsdrop.php";
-		?>
-	</select>
-	<br/><br/>
-	<!-- Dropdown for all current patients -->
-	<p>Select patient: </p>
-	<select class="form-control" name="whichpatremove" id="whichpatremove">
-	  	<?php 
-			include "getpatientsdrop.php";
-		?>
-	</select>
-	<br/><br/>
-	<!-- Button to remove doctors from patients -->
-	<input class="btn btn-primary" type="submit" value="Remove">
+		<!-- Dropdown for all current doctors -->
+		<p>Select doctor: </p>
+		<select class="form-control" name="whichdocremove" id="whichdocremove">
+		  	<?php 
+				include "getdoctorsdrop.php";
+			?>
+		</select>
+		<br/><br/>
+		<!-- Dropdown for all current patients -->
+		<p>Select patient: </p>
+		<select class="form-control" name="whichpatremove" id="whichpatremove">
+		  	<?php 
+				include "getpatientsdrop.php";
+			?>
+		</select>
+		<br/><br/>
+		<!-- Button to remove doctors from patients -->
+		<input class="btn btn-primary" type="submit" value="Remove">
 	</form>
 	<br/><br/>
 	<!-- Place the output from removedoc.php if posted -->

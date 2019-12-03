@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<!-- Navigation bar -->
+<!-- Navigation bar current page is Doctors-->
 <nav class="navbar navbar-inverse">
   	<div class="container-fluid">
     	<div class="navbar-header">
@@ -25,7 +25,7 @@
   	</div>
 </nav>
 
-
+<!-- Connect to database -->
 <?php
 	include "connectdb.php";
 ?>
@@ -44,7 +44,7 @@
 		<input type="radio" name="sortbytype" value="ASC">Ascending<br/>
 		<input type="radio" name="sortbytype" value="DESC">Descending<br/><br/>
 
-		<input type="submit" value="Search">
+		<input class="btn btn-primary" type="submit" value="Search">
 	</form>
 
 	<br/>
@@ -56,7 +56,7 @@
 		echo "<br/>";
 	}
 	?>
-	<input type="submit" value="Get More Info">
+	<input class="btn btn-primary" type="submit" value="Get More Info">
 	</form>
 
 	<br/>
@@ -73,8 +73,8 @@
 	<h2>Search for doctors by license date</h2>
 	<form action="" method="post">
 	<p>Find doctors licensed before given license date:</p>
-	<input type="date" name="licdate">
-	<input type="submit" value="Search">
+	<input class="form-control" type="date" name="licdate">
+	<input class="form-control" type="submit" value="Search">
 	</form>
 
 	<br/>
@@ -90,32 +90,33 @@
 	<!--Insert a new doctor-->
 	<h2>Insert a new doctor</h2>
 	<form action="" method="post" enctype="multipart/form-data">
-	New Doctor's First Name: <br/>
-	<input type="text" name="FirstName"><br/><br/>
-	New Doctor's Last Name: <br/>
-	<input type="text" name="LastName"><br/><br/>
-	New Doctor's License Number: <br/>
-	<input type="text" name="LicenseNumber"><br/><br/>
-	New Doctor's Specialty: <br/>
-	<input type="text" name="Specialty"><br/><br/>
-	New Doctor's License Date: <br/>
-	<input type="date" name="LicenseDate"><br/><br/>
-	New Doctor's Hospital Name: <br/>
-	<select name="whichhosp" id="whichhosp">
-	<?php 
-		include "gethospital.php";
-	?>
-	</select><br/><br/>
+		New Doctor's First Name: <br/>
+		<input class="form-control" type="text" name="FirstName"><br/><br/>
+		New Doctor's Last Name: <br/>
+		<input class="form-control" type="text" name="LastName"><br/><br/>
+		New Doctor's License Number: <br/>
+		<input class="form-control" type="text" name="LicenseNumber"><br/><br/>
+		New Doctor's Specialty: <br/>
+		<input class="form-control" type="text" name="Specialty"><br/><br/>
+		New Doctor's License Date: <br/>
+		<input class="form-control" type="date" name="LicenseDate"><br/><br/>
+		New Doctor's Hospital Name: <br/>
+		<select class="form-control" name="whichhosp" id="whichhosp">
+			<?php 
+				include "gethospital.php";
+			?>
+		</select>
+		<br/><br/>
 
-	<input type="submit" value="Insert Doctor">
-	<br/>
+		<input type="submit" value="Insert Doctor">
+		<br/>
 	</form>
 
 	<br/>
 	<?php
-	if (isset($_POST['LicenseNumber'])) {
-		include "adddoctor.php";
-	}
+		if (isset($_POST['LicenseNumber'])) {
+			include "adddoctor.php";
+		}
 	?>
 	<br/>
 	<hr>
@@ -124,13 +125,13 @@
 	<!--Delete an existing doctor-->
 	<h2>Delete an existing doctor</h2>
 	<form action="" method="post" enctype="multipart/form-data">
-	<select name="deldoc" id="deldoc">
+	<select class="form-control" name="deldoc" id="deldoc">
 		<option value="">Select Doctor to Delete</option>
 	  	<?php 
 			include "getdoctorstodel.php";
 		?>
 	</select><br/><br/>
-	<input type="submit" value="Delete Doctor">
+	<input class="btn btn-primary" type="submit" value="Delete Doctor">
 	</form>
 
 	<br/>
