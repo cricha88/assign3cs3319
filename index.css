@@ -1,12 +1,10 @@
 /* Very basic additional CSS to complement bootstrap CSS on index.html page*/
 
-html,
-body {
+html, body {
     height: 100%;
 }
 
 .container {
-    height: 100%;
     align-items: center;
     justify-content: center;
     display: flex;
