@@ -31,45 +31,48 @@
 ?>
 
 <div class="container">
-<h1>Hospitals</h1>
-<hr>
+	<h1>Hospitals</h1>
+	<hr>
 
-<!--Update a hospital name-->
-<h2>Update a Hospital Name</h2>
-<form action="" method="post" enctype="mutipart/form-data">
-<select name="whichhosp" id="whichhosp">
-  	<?php 
-		include "gethospital.php";
+
+	<!--Update a hospital name-->
+	<h2>Update a Hospital Name</h2>
+	<form action="" method="post" enctype="mutipart/form-data">
+	<select name="whichhosp" id="whichhosp">
+	  	<?php 
+			include "gethospital.php";
+		?>
+	</select>
+	<input class="form-control" type="text" name="updhosp">
+	<input type="submit" value="Update Hospital Name">
+	<br/><br/>
+	</form>
+
+	<br/>
+	<?php
+	if (isset($_POST['whichhosp'])) {
+		include "updhospname.php";
+	}
 	?>
-</select>
-<input class="form-control" type="text" name="updhosp">
-<input type="submit" value="Update Hospital Name">
-<br/><br/>
-</form>
-
-<br/>
-<?php
-if (isset($_POST['whichhosp'])) {
-	include "updhospname.php";
-}
-?>
+	<br/>
+	<hr>
 
 
-<br/>
-<hr>
-<!--List Hospital Info-->
-<h2>List Hospital Head Doctors</h2>
-  	<?php 
-		include "gethospitalhead.php";
-	?>
-<br/><br/>
+	<!-- List Hospital Info and Head Doctors-->
+	<h2>List Hospital Head Doctors</h2>
+	  	<?php 
+			include "gethospitalhead.php";
+		?>
+	<br/><br/>
 
+	<hr>
 
-<hr>
 </div>
 
 <br/><br/><br/><br/>
 
+
+<!-- Close connection to database -->
 <?php
 mysqli_close($connection);
 ?>

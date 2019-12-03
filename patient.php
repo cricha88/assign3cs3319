@@ -38,9 +38,10 @@
 	<!--Search Patient by OHIP Number-->
 	<h2>Search Patient by OHIP Number</h2>
 	<form action="" method="post" enctype="">
-	<input class="form-control" type="text" name="whichpatient" placeholder="123456789">
-	<input class="btn btn-primary" type="submit" value="Search Patient">
-	<br/>
+		<input class="form-control" type="text" name="whichpatient" placeholder="123456789">
+		<br/>
+		<input class="btn btn-primary" type="submit" value="Search Patient">
+		<br/>
 	</form>
 	<br/>
 	<?php 
@@ -55,31 +56,31 @@
 	<!--Assign doctors to patients-->
 	<h2>Assign doctors to patients</h2>
 	<form action="" method="post" enctype="mutipart/form-data">
-	<!-- Dropdown for all current doctors -->
-	<p>Select doctor: </p>
-	<select class="form-control" name="whichdocassign" id="whichdocassign">
-	  	<?php 
-			include "getdoctorsdrop.php";
-		?>
-	</select>
-	<br/><br/>
-	<!-- Dropdown for all current patients -->
-	<p>Select patient: </p>
-	<select class="form-control" name="whichpatassign" id="whichpatassign">
-	  	<?php 
-			include "getpatientsdrop.php";
-		?>
-	</select>
-	<br/><br/>
-	<!-- Button to assign doctors tp patients -->	
-	<input class="btn btn-primary" type="submit" value="Assign">
+		<!-- Dropdown for all current doctors -->
+		<p>Select doctor: </p>
+		<select class="form-control" name="whichdocassign" id="whichdocassign">
+		  	<?php 
+				include "getdoctorsdrop.php";
+			?>
+		</select>
+		<br/><br/>
+		<!-- Dropdown for all current patients -->
+		<p>Select patient: </p>
+		<select class="form-control" name="whichpatassign" id="whichpatassign">
+		  	<?php 
+				include "getpatientsdrop.php";
+			?>
+		</select>
+		<br/><br/>
+		<!-- Button to assign doctors tp patients -->	
+		<input class="btn btn-primary" type="submit" value="Assign">
 	</form>
 	<br/><br/>
 	<!-- Place the output from assigndoc.php if posted -->	
 	<?php
-	if (isset($_POST['whichdocassign']) && isset($_POST['whichpatassign'])) {
-		include "assigndoc.php";
-	}
+		if (isset($_POST['whichdocassign']) && isset($_POST['whichpatassign'])) {
+			include "assigndoc.php";
+		}
 	?>
 	<br/>
 	<hr>
@@ -111,16 +112,17 @@
 	<br/><br/>
 	<!-- Place the output from removedoc.php if posted -->
 	<?php
-	if (isset($_POST['whichdocremove']) && isset($_POST['whichpatremove'])) {
-		include "removedoc.php";
-	}
+		if (isset($_POST['whichdocremove']) && isset($_POST['whichpatremove'])) {
+			include "removedoc.php";
+		}
 	?>
-
 	<hr>
+
 </div>
 
 <br/><br/><br/><br/>
 
+<!-- Close connection to database -->
 <?php
 mysqli_close($connection);
 ?>
